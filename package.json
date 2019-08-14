@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/maualkla/weatherapp/issues"
   },
-  "homepage": "https://github.com/maualkla/weatherapp#readme"
+  "homepage": "https://github.com/maualkla/weatherapp#readme",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
 }
