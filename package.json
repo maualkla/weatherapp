@@ -1,0 +1,22 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "First weather app by Mauricio Alcala",
+  "main": "index.js",
+  "scripts": {
+    "test": "testCommand"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maualkla/weatherapp.git"
+  },
+  "keywords": [
+    "weather"
+  ],
+  "author": "Mauricio Alcala",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/maualkla/weatherapp/issues"
+  },
+  "homepage": "https://github.com/maualkla/weatherapp#readme"
+}
