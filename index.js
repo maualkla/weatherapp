@@ -2,9 +2,11 @@
 // Made by Mauricio EAL
 // August 14th, 2019
 // Make the request to weather 
+const argv = require('yargs').argv;
 const request = require('request');
+
 let     url = `http://api.openweathermap.org/data/2.5/forecast`,
-        city = 'Aguascalientes',
+        city = argv.c || 'Aguascalientes',
         appId = 'aa00dbd5e679b8ea3549cc02e3e1068f',
         unit = 'imperial',
         testUrl = 'fake.fake',
