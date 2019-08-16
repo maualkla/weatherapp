@@ -4,11 +4,12 @@
 // Make the request to weather 
 const request = require('request');
 let     url = `http://api.openweathermap.org/data/2.5/forecast`,
-        city = 'Chicago',
-        appId = 'aa00dbd5e679b8ea3549cc02e3e1068f'
+        city = 'Aguascalientes',
+        appId = 'aa00dbd5e679b8ea3549cc02e3e1068f',
+        unit = 'imperial',
         testUrl = 'fake.fake',
         message = ``;
-url = `${url}?q=${city}&APPID=${appId}`;
+url = `${url}?q=${city}&APPID=${appId}&units=${unit}`;
 console.log(url);
 
 request(url, (err, response, body) => {
