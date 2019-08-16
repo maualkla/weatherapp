@@ -4,19 +4,24 @@
 // Make the request to weather 
 const request = require('request');
 let     url = `http://api.openweathermap.org/data/2.5/forecast`,
-        id = '524901',
+        city = 'Chicago',
         appId = 'aa00dbd5e679b8ea3549cc02e3e1068f'
-        testUrl = 'fake.fake';
-url = `${url}?id=${id}&APPID=${appId}`;
+        testUrl = 'fake.fake',
+        message = ``;
+url = `${url}?q=${city}&APPID=${appId}`;
 console.log(url);
 
-request(testUrl, (err, response, body) => {
+request(url, (err, response, body) => {
     if (err)
     {
         console.log(`Error ${err}`);
     }
     else
     {
-        console.log(`Body: ${body}`);
+        let output = JSON.parse(body);
+        //console.log(`Body: ${body}`);
+        //console.log(output);
+        message = `There is ${output.list[0].main.temp} °F or ${((output.list[0].main.temp - 32) * (5/9)).toFixed(2)} °C degrees in ${output.city.name}`;
+        console.log(message);
     }
 });
