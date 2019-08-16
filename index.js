@@ -3,12 +3,17 @@
 // August 14th, 2019
 // Make the request to weather 
 const request = require('request');
-let url = `http://api.openweathermap.org/data/2.5/forecast`;
+let     url = `http://api.openweathermap.org/data/2.5/forecast`,
+        id = '524901',
+        appId = 'aa00dbd5e679b8ea3549cc02e3e1068f'
+        testUrl = 'fake.fake';
+url = `${url}?id=${id}&APPID=${appId}`;
+console.log(url);
 
-request(url, (err, response, body) => {
+request(testUrl, (err, response, body) => {
     if (err)
     {
-        console.log(`Error ${error}`);
+        console.log(`Error ${err}`);
     }
     else
     {
